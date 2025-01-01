@@ -30,7 +30,7 @@ module.exports.run = async ({ api, event, args }) => {
 
             api.sendMessage(
                 {
-                    body: "তোমার হ্যাকের ছবি রেডি!",
+                    body: "তুই হ্যাক হয়ে গেছিস 😈👿!",
                     attachment: fs.createReadStream(filePath)
                 },
                 event.threadID,
