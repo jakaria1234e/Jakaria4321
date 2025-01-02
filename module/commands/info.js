@@ -10,9 +10,18 @@ module.exports.config = {
 }
 
 module.exports.run = ({api, event, args}) => {
-  
-    const photo = path.join(__dirname, 'cache', '20241012_194302.jpg');
 
+
+
+
+
+const rndmp = Math.floor(Math.random() * 3);
+
+const photo = path.join(__dirname, 'cache', `info${rndmp}.jpg`);
+
+
+
+  
     
     
     const time = process.uptime(),
