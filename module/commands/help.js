@@ -5,14 +5,15 @@ module.exports.config = {
     name: "help",
     description: "Displays all available commands and events",
     permission: 0,
+    "credit": "Anik",
     prefix: true,
     cooldown: 5,
-}
+};
 
 module.exports.run = async ({ api, event, permissions }) => {
     const commandsAndEvents = {
         commands: [],
-        events: []
+        events: [],
     };
 
     const loadFolderContent = (folderPath, type) => {
@@ -21,9 +22,9 @@ module.exports.run = async ({ api, event, permissions }) => {
                 try {
                     const module = require(path.join(folderPath, file));
                     if (module.config) {
-                        if (type === 'command') {
+                        if (type === "command") {
                             commandsAndEvents.commands.push(module.config);
-                        } else if (type === 'event') {
+                        } else if (type === "event") {
                             commandsAndEvents.events.push(module.config);
                         }
                     }
@@ -35,36 +36,50 @@ module.exports.run = async ({ api, event, permissions }) => {
     };
 
     const commandPath = path.join(__dirname, "../../module/commands");
-    loadFolderContent(commandPath, 'command');
+    loadFolderContent(commandPath, "command");
 
     const eventPath = path.join(__dirname, "../../module/events");
-    loadFolderContent(eventPath, 'event');
+    loadFolderContent(eventPath, "event");
 
     const totalCommands = commandsAndEvents.commands.length;
     const totalEvents = commandsAndEvents.events.length;
 
-    let message = `💥 **Total Commands:** ${totalCommands} \n🎉 **Total Events:** ${totalEvents}\n\n`;
-    message += "✨ **Here are all available commands and events:** ✨\n\n";
+    let message = `╭━〔 🌐 COMMAND INFO 〕━╮\n`;
+    message += `┣ 💥 Total Commands: ${totalCommands}\n`;
+    message += `┣ 🎉 Total Events: ${totalEvents}\n`;
+    message += `╰━━━━━━━━━━━━━━━━━━━╯\n\n`;
 
+    message += `✨ Here are all available commands and events: ✨\n\n`;
 
-    commandsAndEvents.commands.forEach(module => {
+    const formatModuleInfo = (module, type) => {
+        const permissionLevel =
+            module.permission === 0
+                ? "All Users"
+                : module.permission === 3
+                ? "Admins Only"
+                : "Others";
+        const prefixRequired = module.prefix === false ? "No" : "Yes";
+
+        return `╭━〔  ${module.name} (${type}):〕━╮\n` +
+               `┣ 🔑 Permission: ${permissionLevel}\n` +
+               `┣ ⏱️ Prefix Required: ${prefixRequired}\n` +
+               `╰━━━━━━━━━━━━━━━━━━━╯\n\n`;
+    };
+
+    commandsAndEvents.commands.forEach((module) => {
         if (module.permission === 0 || permissions >= module.permission) {
-            message += `🔧 **${module.name} (Command):**\n`;
-            message += `  🔑 **Permission:** ${module.permission === 0 ? "All Users" : (module.permission === 3 ? "Admins Only" : "Others")}\n`;
-            message += `  ⏱️ **Prefix:** ${module.prefix === false ? "No" : "Yes"}\n`; // Condition changed to show "No" when prefix is false
-            message += `\n`;
+            message += formatModuleInfo(module, "Command");
         }
     });
 
-    commandsAndEvents.events.forEach(module => {
+    commandsAndEvents.events.forEach((module) => {
         if (module.permission === 0 || permissions >= module.permission) {
-            message += `🎉 **${module.name} (Event):**\n`;
-            message += `  🔑 **Permission:** ${module.permission === 0 ? "All Users" : (module.permission === 3 ? "Admins Only" : "Others")}\n`;
-            message += `  ⏱️ **Prefix:** ${module.prefix === false ? "No" : "Yes"}\n`; // Condition changed to show "No" when prefix is false
-            message += `\n\n`;
+            message += formatModuleInfo(module, "Event");
         }
     });
-    message += `🌟 𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲! 𝗙𝗲𝗲𝗹 𝗙𝗿𝗲𝗲 𝗧𝗼 𝗥𝗲𝗮𝗰𝗵 𝗢𝘂𝘁 𝗜𝗳 𝗬𝗼𝘂 𝗛𝗮𝘃𝗲 𝗔𝗻𝘆 𝗣𝗿𝗼𝗯𝗹𝗲𝗺𝘀! 🌟\n📩 **Contact me on Facebook:** https://www.facebook.com/LostFragmentX`;
 
-    api.sendMessage(message, event.threadID); // Send the list of commands and events to the user
-}
+    message += `🌟 **Hey There! Feel Free To Reach Out If You Have Any Problems!** 🌟\n`;
+    message += `📩 **Contact me on Facebook:** https://www.facebook.com/LostFragmentX`;
+
+    api.sendMessage(message, event.threadID);
+};}
