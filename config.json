@@ -2,6 +2,7 @@
     "version": "1.0.0",
     "BOTNAME": "༆̞̎̎̎͢⋆⃝🤖Anik-bot༆̞̎̎̎͢⋆⃝🤖",
     "restart": true,
+    "login": "cookie",
     "PREFIX": "/",
     "ADMINBOT": [
          "100015487808389",
