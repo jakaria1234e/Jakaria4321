@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "BOTNAME": "༆̞̎̎̎͢⋆⃝🤖Anik-bot༆̞̎̎̎͢⋆⃝🤖",
     "restart": true,
-    "login": "appstate", //select your cookie or appstate
+    "login": "appstate",
     "PREFIX": "/",
     "ADMINBOT": [
          "100015487808389",
