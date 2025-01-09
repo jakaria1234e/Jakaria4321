@@ -82,4 +82,4 @@ module.exports.run = async ({ api, event, permissions }) => {
     message += `📩 **Contact me on Facebook:** https://www.facebook.com/LostFragmentX`;
 
     api.sendMessage(message, event.threadID);
-};}
+};
