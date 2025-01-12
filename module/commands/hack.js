@@ -21,7 +21,7 @@ module.exports.run = async ({ api, event, args }) => {
         userName = userName.replace('@', '');
 
         try {
-            const response = await axios.get(`https://edit-api-cwhu.onrender.com/hack?id1=${userId}&name=${userName}`, {
+            const response = await axios.get(`${global.anikApi.edit}/hack?id1=${userId}&name=${userName}`, {
                 responseType: 'arraybuffer'
             });
 
