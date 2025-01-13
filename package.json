@@ -7,10 +7,12 @@
     "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "MOHAMMAD ANIK",
+  "license": "GPL-3.0",
   "description": "",
   "dependencies": {
+    "@distube/ytdl-core": "^4.15.8",
+    "@google-cloud/text-to-speech": "^5.7.0",
     "exec": "^0.2.1",
     "express": "^4.21.2",
     "fluent-ffmpeg": "^2.1.3",
@@ -29,6 +31,7 @@
     "priyanshu-fca": "^3.0.0",
     "process": "^0.11.10",
     "request": "^2.88.2",
+    "say": "^0.16.0",
     "sharp": "^0.33.5",
     "tough-cookie": "^5.0.0",
     "youtube-search-api": "^1.2.2",
