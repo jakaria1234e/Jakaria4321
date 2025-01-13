@@ -20,7 +20,7 @@ module.exports.run = async ({ api, event, args }) => {
     }
 
     try {
-        const info = await youtube.GetListByKeyword(args.join(" song"), false, 5);
+        const info = await youtube.GetListByKeyword(args.join(" song"), false, 2);
         if (!info.items || info.items.length === 0) {
             return api.sendMessage("কোনো গান খুঁজে পাওয়া যায়নি।", event.threadID, event.messageID);
         }
