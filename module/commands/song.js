@@ -20,13 +20,13 @@ module.exports.run = async ({ api, event, args }) => {
     }
 
     try {
-        const info = await youtube.GetListByKeyword(args.join(" song"), false, 2);
+        const info = await youtube.GetListByKeyword(args.join(" song"), false, 1);
         if (!info.items || info.items.length === 0) {
             return api.sendMessage("কোনো গান খুঁজে পাওয়া যায়নি।", event.threadID, event.messageID);
         }
 
-        const rndmp = Math.floor(Math.random() * info.items.length);
-        const songInfo = info.items[rndmp];
+      //  const rndmp = Math.floor(Math.random() * info.items.length);
+        const songInfo = info.items[0];
         const title = songInfo.title;
         const link = "https://www.youtube.com/watch?v=" + songInfo.id;
 
