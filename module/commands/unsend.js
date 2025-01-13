@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "unsent",
+    name: "unsend",
     description: "Unsend the bot's message that you replied to.",
     permission: 0, 
     prefix: true,
