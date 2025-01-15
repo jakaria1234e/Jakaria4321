@@ -39,4 +39,15 @@ Click on the "Fork" button at the top-right of this page to create a copy of thi
 Clone the forked repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/Anik-bot.git
+git clone https://github.com/MOHAMMAD-ANIK/Anik-bot.git
+
+
+
+
+## 👨‍💻 **Owner**  
+The owner of **Anik-Bot** is [MOHAMMAD-ANIK](https://github.com/MOHAMMAD-ANIK), the creator and maintainer of the project.
+
+
+
+
+
