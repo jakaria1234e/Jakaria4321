@@ -35,4 +35,4 @@ Follow these steps to install and run Anik-Bot:
 ### Step 1: import the Repository  
 Clone this repository to your GitHub account using the following command:
 
-```bash import https://github.com/MOHAMMAD-ANIK/Anik-bot.git
+```bash git clone https://github.com/MOHAMMAD-ANIK/Anik-bot.git
