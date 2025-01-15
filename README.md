@@ -32,7 +32,11 @@ The structure of Anik-Bot allows for easy navigation and customization:
 ## 🔧 **Installation**  
 Follow these steps to install and run Anik-Bot:
 
-### Step 1: import the Repository  
-Clone this repository to your GitHub account using the following command:
+### 1. Fork the Repository  
+Click on the "Fork" button at the top-right of this page to create a copy of this repository under your GitHub account.
 
-```bash git clone https://github.com/MOHAMMAD-ANIK/Anik-bot.git
+### 2. Clone Your Fork  
+Clone the forked repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/Anik-bot.git
