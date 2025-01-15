@@ -29,6 +29,15 @@ The structure of Anik-Bot allows for easy navigation and customization:
 
 ---
 
+## 👨‍💻 **Owner**  
+The owner of **Anik-Bot** is ## 👨‍💻 **Owner**  
+The owner of **Anik-Bot** is [MOHAMMAD-ANIK](https://github.com/MOHAMMAD-ANIK), the creator and maintainer of the project. the creator and maintainer of the project.
+
+[BOT LINK](https://github.com/MOHAMMAD-ANIK/Anik-bot.git)
+
+[FACEBOOK](https://www.facebook.com/LostFragmentX)
+
+
 ## 🔧 **Installation**  
 Follow these steps to install and run Anik-Bot:
 
@@ -44,8 +53,7 @@ git clone https://github.com/MOHAMMAD-ANIK/Anik-bot.git
 
 
 
-## 👨‍💻 **Owner**  
-The owner of **Anik-Bot** is [MOHAMMAD-ANIK](https://github.com/MOHAMMAD-ANIK), the creator and maintainer of the project.
+
 
 
 
