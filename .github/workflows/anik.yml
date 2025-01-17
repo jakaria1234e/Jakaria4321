@@ -1,4 +1,4 @@
-name: Run with Nodemon
+name: Run Bot with Nodemon
 
 on:
   push:
@@ -21,9 +21,6 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-
-    - name: Install espeak
-      run: sudo apt-get update && sudo apt-get install -y espeak
 
     - name: Start Bot with npx and Nodemon
       run: npx nodemon index.js
