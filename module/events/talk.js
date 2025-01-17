@@ -19,7 +19,7 @@ const errmsg = '~~ওহ্, baby! এটা আমাকে শিখানো 
 
 if(event.body) {
 
-if (event.body.toLowerCase() === 'bot' || event.body === 'বট') {
+if (event.body.toLowerCase() === 'bot' || event.body.toLowerCase() === 'anik' || event.body === 'বট') {
             const tl = [
                 "বেশি bot Bot করলে leave নিবো কিন্তু😒😒",
                 "উফ্স বেবী একটা কিস দেও 🥵",
