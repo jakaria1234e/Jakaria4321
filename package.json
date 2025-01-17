@@ -29,7 +29,6 @@
     "nodemon": "^3.1.9",
     "play-dl": "^1.9.7",
     "pm2": "^5.4.3",
-    "puppeteer": "^19.0.0",
     "priyanshu-fca": "^3.0.0",
     "process": "^0.11.10",
     "request": "^2.88.2",
