@@ -1,19 +1,10 @@
 module.exports.config = {
-    name: "idea",
-    prefix: true,
-    version: "1.0.0",
-    permssion: 1,
-    credits: "...",
+    name: "idea",           
     description: "5 বারের জন্য ক্রমাগত বন্ধুর ট্যাগ ট্যাগ করুন\nসেই ব্যক্তিকে আত্মা কলিং বলা যেতে পারে",
-    category: "user",
-    usages: " please @mention",
-    cooldowns: 10,
-    dependencies: {
-        "fs-extra": "",
-        "axios": ""
-    }
-}
-
+    permission: 3,          
+    prefix: true,         
+    cooldown: 5
+};
 module.exports.run = async function({ api, args, Users, event}) {
     var mention = Object.keys(event.mentions)[0];
     if(!mention) return api.sendMessage("আপনি কাকে জ্ঞান দিতে চান এমন 1 জনকে @ম্যানশন করতে হবে", event.threadID);
